@@ -1,0 +1,23 @@
+# Rust build artifacts
+target/
+Cargo.lock
+
+# Virtual Machine Images
+*.qcow2
+*.img
+*.iso
+
+# Local cached policies or run files
+debai_cache.json
+debai_policy.json
+*.sock
+*.log
+
+# Python environment / cached compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/

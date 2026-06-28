@@ -1,0 +1,17 @@
+[Unit]
+Description=DebAI AI Operating System Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/aid --socket /run/debai/aid.sock
+Restart=on-failure
+RuntimeDirectory=debai
+RuntimeDirectoryMode=0755
+
+# Resource limiting
+CPUQuota=50%
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target
